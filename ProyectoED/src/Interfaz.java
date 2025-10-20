@@ -26,29 +26,54 @@ public class Interfaz extends JFrame {
         panelSuperior.add(panelMano);
         add(panelSuperior, BorderLayout.NORTH);
 
-        panelCaja = new JPanel();
-        panelCaja.setBorder(BorderFactory.createTitledBorder("Caja (26 Cartas)"));
-        panelCaja.setLayout(new GridLayout(4, 7, 10, 10));
+       panelCaja = new JPanel();
+        panelCaja.setBorder(BorderFactory.createTitledBorder("Caja (52 Cartas)"));
+        panelCaja.setLayout(new GridLayout(4, 13, 10, 10));
 
         add(panelCaja, BorderLayout.CENTER);
 
         cartas = new ArrayList<>();
         crearCartas();
         mostrarCartas();
+        JPanel panelInferior = new JPanel(new FlowLayout());
+panelInferior.setBorder(BorderFactory.createTitledBorder("Controles"));
+
+JButton btnBarajar = new JButton("Barajar Cartas");
+JButton btnValidar = new JButton("Validar Sándwich");
+JButton btnGuardar = new JButton("Guardar");
+JButton btnCargar = new JButton("Cargar");
+
+panelInferior.add(btnBarajar);
+panelInferior.add(btnValidar);
+panelInferior.add(btnGuardar);
+panelInferior.add(btnCargar);
+
+add(panelInferior, BorderLayout.SOUTH);
 
         setVisible(true);
     }
 
     private void crearCartas() {
-        String[] valores = { "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" };
+    String[] valores = { "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" };
 
-        for (String valor : valores) {
-            cartas.add(new Carta(valor, "♠ Picas"));
-        }
-        for (String valor : valores) {
-            cartas.add(new Carta(valor, "♥ Corazones"));
-        }
+  
+    for (String valor : valores) {
+        cartas.add(new Carta(valor, "♠ Picas"));
     }
+
+    for (String valor : valores) {
+        cartas.add(new Carta(valor, "♥ Corazones"));
+    }
+
+    for (String valor : valores) {
+        cartas.add(new Carta(valor, "♦ Diamantes"));
+    }
+
+  
+    for (String valor : valores) {
+        cartas.add(new Carta(valor, "♣ Tréboles"));
+    }
+}
 
     private void mostrarCartas() {
         for (Carta c : cartas) {
@@ -58,6 +83,13 @@ public class Interfaz extends JFrame {
             cartaLabel.setBackground(Color.WHITE);
             cartaLabel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
             cartaLabel.setPreferredSize(new Dimension(100, 60));
+
+            if (c.getPalo().contains("♥") || c.getPalo().contains("♦")) {
+                cartaLabel.setForeground(Color.RED);
+            } else {
+                cartaLabel.setForeground(Color.BLACK);
+            }
+
             panelCaja.add(cartaLabel);
         }
     }
