@@ -33,7 +33,8 @@
 
 ## Prompts de ChatGPT
 - [Prompt 1](https://chatgpt.com/share/68f6c11e-c4a0-800c-ba77-28ff8e3b7a3f)  
-- [Prompt 2](https://chatgpt.com/share/68f6c332-3c58-800c-9d83-b144db9376bc)  
+- [Prompt 2](https://chatgpt.com/share/68f6c332-3c58-800c-9d83-b144db9376bc)
+- [Prompt 3](https://chatgpt.com/share/6924eff2-d584-800c-bb51-c017b1f90538)
 
 ---
 
@@ -48,6 +49,9 @@
 
 ## Clases utilizadas
 ```java
+import java.util.Collections;
+import java.util.Stack;
 import javax.swing.*; 
-import java.awt.*;   
+import java.awt.*;
+import java.util.List;
 import java.util.ArrayList;
