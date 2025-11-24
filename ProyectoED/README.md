@@ -49,7 +49,6 @@
 
 ## Clases utilizadas
 ```java
-import java.util.Collections;
 import java.util.Stack;
 import javax.swing.*; 
 import java.awt.*;
