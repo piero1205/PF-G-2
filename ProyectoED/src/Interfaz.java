@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Interfaz extends JFrame {
 
     private ArrayList<Carta> cartas;
-    private ArrayList<Carta> mazoCartas;   
+    private ArrayList<Carta> mazoCartas;
     private JPanel panelCaja, panelMazo, panelMano, panelPozo;
     private Mano mano;
 
@@ -16,14 +16,25 @@ public class Interfaz extends JFrame {
         setLayout(new BorderLayout());
 
         JPanel panelSuperior = new JPanel(new GridLayout(1, 3));
+
         panelMazo = new JPanel();
+        panelMazo.setLayout(new GridLayout(0, 1));
         panelMazo.setBorder(BorderFactory.createTitledBorder("Mazo"));
+
+        JScrollPane scrollMazo = new JScrollPane(
+                panelMazo,
+                JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,
+                JScrollPane.HORIZONTAL_SCROLLBAR_NEVER
+        );
+        scrollMazo.setPreferredSize(new Dimension(300, 200));
+
         panelPozo = new JPanel();
         panelPozo.setBorder(BorderFactory.createTitledBorder("Pozo"));
+
         panelMano = new JPanel();
         panelMano.setBorder(BorderFactory.createTitledBorder("Mano"));
 
-        panelSuperior.add(panelMazo);
+        panelSuperior.add(scrollMazo);     
         panelSuperior.add(panelPozo);
         panelSuperior.add(panelMano);
         add(panelSuperior, BorderLayout.NORTH);
@@ -34,7 +45,7 @@ public class Interfaz extends JFrame {
         add(panelCaja, BorderLayout.CENTER);
 
         cartas = new ArrayList<>();
-        mazoCartas = new ArrayList<>();   
+        mazoCartas = new ArrayList<>();
 
         crearCartas();
         mostrarCartas();
@@ -44,13 +55,13 @@ public class Interfaz extends JFrame {
         JPanel panelInferior = new JPanel(new FlowLayout());
         panelInferior.setBorder(BorderFactory.createTitledBorder("Controles"));
 
-        JButton btnPasarMazo = new JButton("Pasar al Mazo");  
+        JButton btnPasarMazo = new JButton("Pasar al Mazo");
         JButton btnBarajar = new JButton("Barajar Cartas");
         JButton btnValidar = new JButton("Validar Sándwich");
         JButton btnGuardar = new JButton("Guardar");
         JButton btnCargar = new JButton("Cargar");
 
-        panelInferior.add(btnPasarMazo); 
+        panelInferior.add(btnPasarMazo);
         panelInferior.add(btnBarajar);
         panelInferior.add(btnValidar);
         panelInferior.add(btnGuardar);
@@ -60,17 +71,16 @@ public class Interfaz extends JFrame {
 
         btnPasarMazo.addActionListener(e -> {
             mazoCartas.clear();
-            mazoCartas.addAll(cartas);   
-            cartas.clear();              
+            mazoCartas.addAll(cartas);
+            cartas.clear();
 
-            mostrarCartas();          
-            mostrarMazo();              
+            mostrarCartas(); 
+            mostrarMazo();    
         });
-
 
         btnBarajar.addActionListener(e -> {
             mano = new Mano();
-            for (int i = 0; i < 8; i++) {
+            for (int i = 0; i < 8 && i < cartas.size(); i++) {
                 mano.agregarCarta(cartas.get(i));
             }
             mostrarMano();
@@ -80,13 +90,14 @@ public class Interfaz extends JFrame {
     }
 
     private void crearCartas() {
-        String[] valores = { "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" };
+        String[] valores = {"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
 
         for (String valor : valores) cartas.add(new Carta(valor, "♠ Picas"));
         for (String valor : valores) cartas.add(new Carta(valor, "♥ Corazones"));
         for (String valor : valores) cartas.add(new Carta(valor, "♦ Diamantes"));
         for (String valor : valores) cartas.add(new Carta(valor, "♣ Tréboles"));
     }
+
 
     private void mostrarCartas() {
         panelCaja.removeAll();
