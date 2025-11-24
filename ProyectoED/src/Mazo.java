@@ -1,56 +1,83 @@
-import java.util.Stack;
-import java.util.Collections;
-import java.util.List;
-
 public class Mazo {
 
-    private Stack<Carta> pila;
+    private static class NodoMazo {
+        Carta carta;
+        NodoMazo siguiente;
+
+        public NodoMazo(Carta carta) {
+            this.carta = carta;
+        }
+    }
+
+    private NodoMazo cima;
+    private int size;
 
     public Mazo() {
-        pila = new Stack<>();
+        cima = null;
+        size = 0;
     }
 
-    public void agregarCartas(List<Carta> cartas) {
-        Collections.shuffle(cartas);
-        pila.addAll(cartas);
-    }
-
-    public void push(Carta carta) {
-        pila.push(carta);
+    public void push(Carta c) {
+        NodoMazo nuevo = new NodoMazo(c);
+        nuevo.siguiente = cima;
+        cima = nuevo;
+        size++;
     }
 
     public Carta pop() {
-        if (pila.isEmpty()) {
-            return null;
-        }
-        return pila.pop();
+        if (cima == null) return null;
+
+        Carta c = cima.carta;
+        cima = cima.siguiente;
+        size--;
+
+        return c;
     }
+
 
     public Carta peek() {
-        if (pila.isEmpty()) {
-            return null;
-        }
-        return pila.peek();
+        if (cima == null) return null;
+        return cima.carta;
     }
 
+
     public boolean estaVacio() {
-        return pila.isEmpty();
+        return cima == null;
     }
 
     public int tamaño() {
-        return pila.size();
+        return size;
     }
+
+    public void agregarCartasDesdeArreglo(Carta[] arreglo) {
+        for (int i = 0; i < arreglo.length; i++) {
+            push(arreglo[i]);
+        }
+    }
+
+
+    public Carta[] obtenerCartasComoArreglo() {
+        Carta[] arr = new Carta[size];
+        NodoMazo actual = cima;
+        int i = 0;
+
+        while (actual != null) {
+            arr[i++] = actual.carta;
+            actual = actual.siguiente;
+        }
+        return arr;
+    }
+
 
     public void mostrarMazo() {
-        System.out.println("=== Contenido Mazo ===");
-        for (Carta c : pila) {
-            System.out.println(c.getValor() + " de " + c.getPalo());
+        System.out.println("=== Contenido del Mazo ===");
+
+        NodoMazo actual = cima;
+        while (actual != null) {
+            System.out.println(actual.carta.getValor() + " de " + actual.carta.getPalo());
+            actual = actual.siguiente;
         }
+
         System.out.println("==========================");
-    }
-
-
-    public Stack<Carta> getPila() {
-        return pila;
     }
 }
