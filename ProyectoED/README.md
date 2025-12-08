@@ -62,15 +62,14 @@ Reinicia el juego completo.
 Mezcla las 52 cartas y reparte una nueva mano al jugador.
 
 ### Ordenar mano
-Organiza las cartas según la regla interna del juego  
-(por palo, número o jerarquía según la implementación).
+Organiza las cartas según la regla interna del juego.
 
 ### Validar mano
 Analiza la mano y determina si cumple con las reglas del juego  
-(combinaciones válidas o condiciones específicas).
+(combinaciones válidas o condiciones).
 
 ### Aplicar tripleta
-Busca si existen tres cartas compatibles (por número o criterio interno)  
+Busca si existen tres cartas compatibles  
 y realiza la acción correspondiente (como moverlas al pozo o eliminarlas).
 
 ### Guardar partida
