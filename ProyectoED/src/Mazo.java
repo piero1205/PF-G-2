@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Mazo {
 
     private static class NodoMazo {
@@ -79,5 +81,17 @@ public class Mazo {
         }
 
         System.out.println("==========================");
+    }
+
+    public ArrayList<Carta> tomar(int n) {
+        ArrayList<Carta> lista = new ArrayList<>();
+        for (int i = 0; i < n && !estaVacio(); i++) {
+            lista.add(pop());
+        }
+        return lista;
+    }
+
+    public boolean victoria() {
+        return estaVacio();
     }
 }

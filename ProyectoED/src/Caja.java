@@ -134,5 +134,4 @@ public class Caja {
             Carta c = extraerAleatoria();
             mazo.push(c);
         }
-    }
-}
+    }}

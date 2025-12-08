@@ -23,6 +23,8 @@ public class Pozo {
         if (c == null)
             return;
 
+        c.setBocaAbajo(true);
+
         Nodo nuevo = new Nodo(c);
 
         if (fin == null) {
