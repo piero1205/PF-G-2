@@ -14,7 +14,6 @@ public class Caja {
     private Nodo cola;
     private int cantidad;
 
-
     public Caja() {
         cabeza = null;
         cola = null;
@@ -81,5 +80,59 @@ public class Caja {
             actual = actual.siguiente;
         }
         return arreglo;
+    }
+
+    public void barajar() {
+        Carta[] arr = obtenerCartas();
+
+        for (int i = 0; i < arr.length; i++) {
+            int j = (int) (Math.random() * arr.length);
+            Carta temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+
+        cabeza = null;
+        cola = null;
+        cantidad = 0;
+
+        for (Carta c : arr) {
+            agregarAlFinal(c);
+        }
+    }
+
+    public Carta extraerAleatoria() {
+        if (cabeza == null)
+            return null;
+
+        int index = (int) (Math.random() * cantidad);
+
+        Nodo actual = cabeza;
+        for (int i = 0; i < index; i++) {
+            actual = actual.siguiente;
+        }
+
+        Carta carta = actual.carta;
+
+        if (actual == cabeza) {
+            extraerPrimero();
+        } else if (actual == cola) {
+            cola = cola.anterior;
+            cola.siguiente = null;
+            cantidad--;
+        } else {
+            actual.anterior.siguiente = actual.siguiente;
+            actual.siguiente.anterior = actual.anterior;
+            cantidad--;
+        }
+
+        return carta;
+    }
+
+    public void pasarAlMazo(Mazo mazo) {
+        while (!estaVacia()) {
+            Carta c = extraerAleatoria();
+            mazo.push(c);
+        }
     }
 }

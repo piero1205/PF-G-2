@@ -25,7 +25,8 @@ public class Mazo {
     }
 
     public Carta pop() {
-        if (cima == null) return null;
+        if (cima == null)
+            return null;
 
         Carta c = cima.carta;
         cima = cima.siguiente;
@@ -34,12 +35,9 @@ public class Mazo {
         return c;
     }
 
-
     public Carta peek() {
-        if (cima == null) return null;
-        return cima.carta;
+        return (cima == null) ? null : cima.carta;
     }
-
 
     public boolean estaVacio() {
         return cima == null;
@@ -50,11 +48,13 @@ public class Mazo {
     }
 
     public void agregarCartasDesdeArreglo(Carta[] arreglo) {
-        for (int i = 0; i < arreglo.length; i++) {
-            push(arreglo[i]);
+        if (arreglo == null)
+            return;
+
+        for (Carta c : arreglo) {
+            push(c);
         }
     }
-
 
     public Carta[] obtenerCartasComoArreglo() {
         Carta[] arr = new Carta[size];
@@ -68,13 +68,13 @@ public class Mazo {
         return arr;
     }
 
-
     public void mostrarMazo() {
         System.out.println("=== Contenido del Mazo ===");
 
         NodoMazo actual = cima;
         while (actual != null) {
-            System.out.println(actual.carta.getValor() + " de " + actual.carta.getPalo());
+            String palo = (actual.carta.getPalo() == null) ? "-" : actual.carta.getPalo();
+            System.out.println(actual.carta.getValor() + " de " + palo);
             actual = actual.siguiente;
         }
 

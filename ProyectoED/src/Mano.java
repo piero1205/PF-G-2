@@ -19,8 +19,10 @@ public class Mano {
         cabeza = null;
         size = 0;
     }
+
     public boolean agregarCarta(Carta c) {
-        if (size >= MAX) return false;
+        if (size >= MAX)
+            return false;
 
         NodoCarta nuevo = new NodoCarta(c);
 
@@ -41,15 +43,16 @@ public class Mano {
     }
 
     public boolean eliminarCarta(Carta c) {
-        if (cabeza == null) return false;
+        if (cabeza == null)
+            return false;
 
         NodoCarta actual = cabeza;
         NodoCarta anterior = null;
 
         do {
-            if (actual.carta == c) {
+            if (actual.carta.equals(c)) {
 
-                if (anterior == null) { 
+                if (anterior == null) {
                     if (cabeza.siguiente == cabeza) {
                         cabeza = null;
                     } else {
@@ -75,10 +78,12 @@ public class Mano {
 
         return false;
     }
+
     public ArrayList<Carta> obtenerCartas() {
         ArrayList<Carta> lista = new ArrayList<>();
 
-        if (cabeza == null) return lista;
+        if (cabeza == null)
+            return lista;
 
         NodoCarta actual = cabeza;
 
@@ -98,4 +103,3 @@ public class Mano {
         return size == 0;
     }
 }
-

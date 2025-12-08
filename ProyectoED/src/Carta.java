@@ -1,4 +1,3 @@
-
 public class Carta {
 
     private String valor;
@@ -11,6 +10,7 @@ public class Carta {
         this.valor = valor;
         this.descripcion = descripcion;
         this.poder = poder;
+        this.palo = "";
         this.bocaAbajo = false;
     }
 
@@ -52,5 +52,4 @@ public class Carta {
         System.out.println("Poder: " + poder);
         System.out.println("-----------------------");
     }
-
 }

@@ -1,56 +1,39 @@
-# Proyecto: Baraja de Cartas
+# Proyecto Estructuras de Datos  
+## Documentación – Avance II
 
-## Integrantes
-- **Piero Jose Carvajal Hidalgo**  
-  Carnet: FI23032172  
-  Correo GitHub: pjcarva12@gmail.com  
-
-- **Andrés Josué Velásquez Jiménez**  
-  Carnet: FI25047199  
-  Correo GitHub: andresjvj652@gmail.com  
-
-- **Marvin Zumbado Zamora**  
-  Carnet: FI25048687  
-  Correo GitHub: marvinzumbado123@gmail.com  
-
-- **Julissa Michell López Dávila**  
-  Carnet: FI24036529  
-  Correo GitHub: Michellelopezdavila076@gmail.com  
+### Integrantes
+- **Piero Jose Carvajal Hidalgo** – Carné: **FI23032172**  
+- **Andrés Josué Velásquez Jiménez** – Carné: **FI25047199**  
+- **Marvin Zumbado Zamora** – Carné: **FI25048687**  
+- **Julissa Michell López Dávila** – Carné: **FI24036529**
 
 ---
 
-## IDE utilizados
-- Visual Studio Code  
-- Apache NetBeans  
+### Editores / IDEs Utilizados
+- **Visual Studio Code**
+- **Apache NetBeans**
 
 ---
 
-## Links de apoyo para el desarrollo
-- [BorderLayout en Java Swing](https://docs.oracle.com/javase/tutorial/uiswing/layout/border.html)  
-- [GridLayout en Java Swing](https://docs.oracle.com/javase/tutorial/uiswing/layout/grid.html)  
+## Instructivo
 
----
+### Instalación
+1. Instalar **Java JDK 21** o superior.  
+2. Instalar un IDE recomendado (VS Code, NetBeans).  
+3. Descargar o clonar el repositorio del proyecto.  
+4. Abrir el proyecto en el IDE.  
+5. Verificar que la clase principal se encuentra en:  PF-G-2/src/Main.java
 
-## Prompts de ChatGPT
-- [Prompt 1](https://chatgpt.com/share/68f6c11e-c4a0-800c-ba77-28ff8e3b7a3f)  
-- [Prompt 2](https://chatgpt.com/share/68f6c332-3c58-800c-9d83-b144db9376bc)
-- [Prompt 3](https://chatgpt.com/share/6924eff2-d584-800c-bb51-c017b1f90538)
+## Compilación
 
----
+### Desde consola (CMD / Terminal)
+1. Abrir la terminal y ubicarse en la carpeta **src**
+2. Compilar todos los archivos `.java`
 
-## Guía básica para usar el código
-1. **Instalar herramientas**: Descargar e instalar **Java 21 (JDK)** y **Visual Studio Code**.  
-2. **Ejecución**: La clase `Interfaz` abrirá una ventana con el título **“Baraja de cartas”** mostrando:  
-   - Un panel superior con secciones **Mazo**, **Pozo** y **Mano**  
-   - Un panel central con todas las cartas (52)  
-   - Un panel inferior con botones (**Barajar Cartas**, **Validar Sandwich**, **Guardar**, **Cargar**)  
+# ▶️ Ejecución
 
----
-
-## Clases utilizadas
-```java
-import java.util.Stack;
-import javax.swing.*; 
-import java.awt.*;
-import java.util.List;
-import java.util.ArrayList;
+### Desde consola
+1. Abrir el proyecto.
+2. Buscar la clase principal
+   `PF-G-2/src/Main.java`
+3. Hacer clic en **Run** o **Ejecutar proyecto**
