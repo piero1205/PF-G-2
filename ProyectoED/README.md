@@ -23,6 +23,11 @@
 
 ---
 
+### Prompts utilizados:
+https://chatgpt.com/share/693741be-8e64-8005-bd7d-23a7ac802aef
+
+---
+
 ## Instructivo
 
 ### Instalación
