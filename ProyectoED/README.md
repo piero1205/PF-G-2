@@ -56,7 +56,7 @@ https://chatgpt.com/share/693741be-8e64-8005-bd7d-23a7ac802aef
 ## Controles del juego
 
 ### Nueva partida
-Reinicia el juego completo:
+Reinicia el juego completo.
 
 ### Barajar y repartir
 Mezcla las 52 cartas y reparte una nueva mano al jugador.
@@ -74,7 +74,7 @@ Busca si existen tres cartas compatibles (por número o criterio interno)
 y realiza la acción correspondiente (como moverlas al pozo o eliminarlas).
 
 ### Guardar partida
-Guarda el estado actual del juego 
+Guarda el estado actual del juego.
 
 ### Cargar partida
 Restaura el estado de una partida guardada previamente.
