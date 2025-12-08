@@ -55,6 +55,9 @@ https://chatgpt.com/share/693741be-8e64-8005-bd7d-23a7ac802aef
 
 ## Controles del juego
 
+Nueva partida
+Reinicia el juego completo:
+
 ### Barajar y repartir
 Mezcla las 52 cartas y reparte una nueva mano al jugador.
 
