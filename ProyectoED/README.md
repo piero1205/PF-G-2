@@ -55,7 +55,7 @@ https://chatgpt.com/share/693741be-8e64-8005-bd7d-23a7ac802aef
 
 ## Controles del juego
 
-Nueva partida
+### Nueva partida
 Reinicia el juego completo:
 
 ### Barajar y repartir
