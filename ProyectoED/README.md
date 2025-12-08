@@ -50,3 +50,28 @@ https://chatgpt.com/share/693741be-8e64-8005-bd7d-23a7ac802aef
 2. Buscar la clase principal
    `PF-G-2/src/Main.java`.
 3. Hacer clic en **Run** o **Ejecutar proyecto.**
+
+---
+
+## Controles del juego
+
+### Barajar y repartir
+Mezcla las 52 cartas y reparte una nueva mano al jugador.
+
+### Ordenar mano
+Organiza las cartas según la regla interna del juego  
+(por palo, número o jerarquía según la implementación).
+
+### Validar mano
+Analiza la mano y determina si cumple con las reglas del juego  
+(combinaciones válidas o condiciones específicas).
+
+### Aplicar tripleta
+Busca si existen tres cartas compatibles (por número o criterio interno)  
+y realiza la acción correspondiente (como moverlas al pozo o eliminarlas).
+
+### Guardar partida
+Guarda el estado actual del juego 
+
+### Cargar partida
+Restaura el estado de una partida guardada previamente.
