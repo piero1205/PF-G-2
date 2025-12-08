@@ -9,7 +9,15 @@
 
 ---
 
-### Editores / IDEs Utilizados
+### Correos / Usuarios
+- **pjcarva12@gmail.com** – piero1205  
+- **andresjvj652@gmail.com** – Andres-2707  
+- **marvinzumbado123@gmail.com** – marvin17378  
+- **Michellelopezdavila076@gmail.com** – michellelopezdavila076  
+
+---
+
+### Editores / IDEs utilizados
 - **Visual Studio Code**
 - **Apache NetBeans**
 
@@ -27,13 +35,13 @@
 ## Compilación
 
 ### Desde consola (CMD / Terminal)
-1. Abrir la terminal y ubicarse en la carpeta **src**
-2. Compilar todos los archivos `.java`
+1. Abrir la terminal y ubicarse en la carpeta **src.**
+2. Compilar todos los archivos `.java`.
 
-# ▶️ Ejecución
+# Ejecución
 
 ### Desde consola
 1. Abrir el proyecto.
-2. Buscar la clase principal
+2. Buscar la clase principal.
    `PF-G-2/src/Main.java`
-3. Hacer clic en **Run** o **Ejecutar proyecto**
+3. Hacer clic en **Run** o **Ejecutar proyecto.**
