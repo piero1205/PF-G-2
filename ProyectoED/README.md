@@ -30,7 +30,7 @@
 2. Instalar un IDE recomendado (VS Code, NetBeans).  
 3. Descargar o clonar el repositorio del proyecto.  
 4. Abrir el proyecto en el IDE.  
-5. Verificar que la clase principal se encuentra en:  PF-G-2/src/Main.java
+5. Verificar que la clase principal se encuentra en:  PF-G-2/src/Main.java.
 
 ## Compilación
 
@@ -42,6 +42,6 @@
 
 ### Desde consola
 1. Abrir el proyecto.
-2. Buscar la clase principal.
-   `PF-G-2/src/Main.java`
+2. Buscar la clase principal
+   `PF-G-2/src/Main.java`.
 3. Hacer clic en **Run** o **Ejecutar proyecto.**
